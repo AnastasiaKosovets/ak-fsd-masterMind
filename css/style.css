@@ -19,7 +19,12 @@ body {
     color: rgba(255, 255, 255, 0.762);
 }
 
-.game:hover, .howToPlay:hover {
+.gameButton, .howToPlayButton {
+    color: rgba(255, 255, 255, 0.762);
+    text-decoration: none;
+}
+
+.game:hover, .howToPlayButton:hover {
     color: #ed7872;
 }
 
