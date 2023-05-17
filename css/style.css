@@ -18,7 +18,7 @@ body {
     text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
   }
 
-@media (max-width:576px) {
+/* @media (max-width:576px) {
     .master{
         font-size: 1em;
         margin-left: 1em;
@@ -30,35 +30,14 @@ body {
         text-align: center;
         text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
     }   
-}
-/* @media (min-width:778px) {
-    .master{
-        margin-left: 0.5em;
-        box-sizing: border-box;
-        border: none;
-        font: 5em/normal "Warnes", Helvetica, sans-serif;
-        color: rgb(246, 244, 247);
-        text-decoration: normal;
-        text-align: center;
-        text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
-    }
-    .logo{
-        height: 35em;
-        width: 40em;
-        margin-right: 10em;
-    }
 } */
 
+
 .game, .howToPlay {
-    /* width: 20em;
-    height: 4em; */
     box-shadow: 0em 0em 0.5em 0.1em rgb(243, 103, 236);
     color: rgba(255, 255, 255, 0.762);
 }
 
-/* .logo {
-    margin-top: -5em;
-} */
  
 
   
