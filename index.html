@@ -20,38 +20,41 @@
     />
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row d-flex justify-content-center">
-        <div class="col-0 col-md-8">
+        <div class="col col-md-7">
           <div class="card bg-transparent col-md-7 border-0">
-              <h2 class="card-title master text-center col-md-8">masterMind</h2>
+              <h2 class="card-title master text-center col-10 col-md-8 ">--- masterMind ---</h2>
           </div>
         </div>
       </div>
-      <div class="row d-flex justify-content-center mb-5">
-        <div class="col-10 col-md-10 d-flex justify-content-center align-items-center">
-          <div class="card bg-transparent border-0 col-md-3">
+      <div class="row d-flex justify-content-center mb-5 me-5">
+        <div class=" col-md-5 col-lg-10 d-flex justify-content-center align-items-center">
+          <div class="card bg-transparent border-0">
             <img
               src="img/logoGamePrueba.png"
-              class="card-img-top logo"
-              alt="..."
+              class="card-img-center logo"
+              alt="Logo of the game"
             />
           </div>
         </div>
       </div>
       <div class="row d-flex justify-content-center">
-        <div
-          class="col-10 col-md-2 px-4 mb-4 justify-content-center aligh-items-center"
+        <div class="d-grid gap-4">
+            <button class="btn game btn-lg bg-transparent" type="button">Button</button>
+            <button class="btn howToPlay btn-lg bg-transparent mb-4" type="button">Button</button>
+          </div>
+        <!-- <div
+          class="col-12 col-md-3 px-4 mb-4 me-5 ms-5 justify-content-center aligh-items-center"
         >
           <button type="button" class="btn game">Jugar</button>
         </div>
         <div
-          class="col-10 col-md-2 px-4 justify-content-center aligh-items-center"
+          class="col-12 col-md-3 px-4 me-5 ms-5 justify-content-center aligh-items-center"
         >
-          <button type="button" class="btn howToPlay">Instrucciones</button>
-        </div>
+          <button type="button" class="btn btn- howToPlay">Instrucciones</button>
+        </div> -->
       </div>
-      <div class="row d-flex"></div>
     </div>
 
     <script
@@ -59,5 +62,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

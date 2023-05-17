@@ -1,20 +1,19 @@
 body {
     background-color: rgb(26, 26, 26);
+    /* width: 100vw;
+    height: 100vh; */
 }
 
-
 .master {
-    display: inline-block;
-    /* box-sizing: border-box;
-    border: none; */
-    font: 2.5em/normal "Warnes", Helvetica, sans-serif;
+    display: flex;
+    /* font: 2.5em/normal "Warnes", Helvetica, sans-serif; */
+    font-size: 2.5em;
+    font-family: "Warnes", Helvetica, sans-serif;
     color: rgb(246, 244, 247);
     text-decoration: normal;
     text-align: center;
-    margin-left: 8em;
+    margin-left: auto;
     margin-top: 1em;
-    /* -o-text-overflow: clip;
-    text-overflow: clip; */
     white-space: pre;
     text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
   }
@@ -22,7 +21,7 @@ body {
 @media (max-width:576px) {
     .master{
         font-size: 1em;
-        margin: 0;
+        margin-left: 1em;
         box-sizing: border-box;
         border: none;
         font: 1.5em/normal "Warnes", Helvetica, sans-serif;
@@ -30,20 +29,36 @@ body {
         text-decoration: normal;
         text-align: center;
         text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
-    }
-
-        
-    
-    
+    }   
 }
-
+/* @media (min-width:778px) {
+    .master{
+        margin-left: 0.5em;
+        box-sizing: border-box;
+        border: none;
+        font: 5em/normal "Warnes", Helvetica, sans-serif;
+        color: rgb(246, 244, 247);
+        text-decoration: normal;
+        text-align: center;
+        text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
+    }
+    .logo{
+        height: 35em;
+        width: 40em;
+        margin-right: 10em;
+    }
+} */
 
 .game, .howToPlay {
+    /* width: 20em;
+    height: 4em; */
     box-shadow: 0em 0em 0.5em 0.1em rgb(243, 103, 236);
-    width: 12em;
     color: rgba(255, 255, 255, 0.762);
 }
 
+/* .logo {
+    margin-top: -5em;
+} */
  
 
   
