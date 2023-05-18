@@ -12,9 +12,17 @@ body {
     margin-top: 1em;
     white-space: pre;
     text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
-  }
+}
 
-.game, .howToPlay {
+.title-master{
+    display: flex;
+    font-family: "Warnes", Helvetica, sans-serif;
+    color: rgb(246, 244, 247);
+    text-decoration: normal;
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
+}
+
+.game, .howToPlay, .text {
     box-shadow: 0em 0em 0.5em 0.1em rgb(243, 103, 236);
     color: rgba(255, 255, 255, 0.762);
 }
