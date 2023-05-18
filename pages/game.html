@@ -44,12 +44,26 @@
       </div>
       <div class="row d-flex justify-content-center">
         <div class="col me-5 text-center d-flex justify-content-center">
-          <div class="card col-md-5 name bg-transparent  ms-4 mb-4">
-            <div class="card-body  text-center">
+          <div class="card col-md-5 name bg-transparent ms-4 mb-4">
+            <div class="card-body text-center">
               <p class="master ms-4">Escribe tú nombre</p>
               <div class="input-group inputName mb-3">
-                <input type="text" class="form-control text-light inputName bg-transparent" placeholder="Tu nombre es..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn inputName btn-outline text-light" type="button" id="button-addon2"><img src="../img/48655_check_icon.png" alt="checkIcon"></button>
+                <input
+                  type="text"
+                  class="form-control text-light inputName bg-transparent"
+                  id="name"
+                  placeholder="Tu nombre es..."
+                  aria-label="Recipient's username"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  onclick="savePlayerName()"
+                  class="btn inputName btn-outline text-light"
+                  type="button"
+                  id="button-addon2"
+                >
+                  <img src="../img/48655_check_icon.png" alt="checkIcon" />
+                </button>
               </div>
             </div>
           </div>
@@ -61,6 +75,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
