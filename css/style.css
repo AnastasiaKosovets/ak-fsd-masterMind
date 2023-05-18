@@ -28,4 +28,21 @@ body {
     color: #ed7872;
 }
 
+.circle{
+    background-image: url(../img/circle1.png);
+    height: 15em;
+    width: 15em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.circle1 {
+    background-image: url(../img/circle2.png);
+    height: 15em;
+    width: 15em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
   
