@@ -18,54 +18,67 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="shortcut icon" href="./img/logoGamePrueba.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./img/logoGamePrueba.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-center p-0 ms-5">
         <div class="card d-flex justify-content-center bg-transparent border-0">
-          <div class="card-body ms-5 master">
+          <div class="card-body master">
             <p class="text-center col-8 col-md-11">--- masterMind ---</p>
           </div>
         </div>
       </div>
+      <div class="row d-flex justify-content-center mb-3">
+        <div class="col-10 col-md-10 d-flex justify-content-center">
+          <a href="../index.html" class="d-flex justify-content-center">
+            <img
+              src="../img/logoGamePrueba.png"
+              class="gitLogo col-8 col-md-8"
+              alt="logo GitHub"
+            />
+          </a>
+        </div>
+      </div>
       <div class="row d-flex justify-content-center">
-        <div class="row d-flex justify-content-center">
-          <div class="col-12 col-md-2">
-            <div class="card mb-3 border-0 bg-transparent">
-              <div class="card-body">
-                <a href="../index.html">
-                  <img
-                    src="../img/logoGamePrueba.png"
-                    class="gitLogo col-12 col-md-9"
-                    alt="logo GitHub"
-                /></a>
-              </div>
-              <!-- <img src="../img/toDirection.gif" alt=""> -->
-            </div>
-          </div>
-          <div class="col-12 d-flex justify-content-center">
-            <div class="card cardChoiseLevel bg-transparent me-5 mb-5">
-              <div class="card-body" id="chooseColors">
-                <p class="card-text text-center">Escoge un nivel</p>
-              </div>
+        <div class="col-12 d-flex justify-content-center">
+          <div class="card cardChoiseLevel bg-transparent ms-4">
+            <div class="card-body" id="chooseColors">
+              <p class="card-text text-center">Escoge un nivel</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="row d-flex justify-content-evenly">
-        <div class="col-12 col-md-2 mx-auto">
-          <button class="btn gameBut btn-lg bg-transparent" type="button" onclick="screenLevel()">
+      <div class="row d-flex justify-content-center m-5">
+        <div class="col-12 col-md-2">
+          <button
+            class="btn gameBut btn-lg bg-transparent"
+            type="button"
+            onclick="screenLevel()"
+          >
             <a class="gameButton" href="../pages/colors.html">Principiante </a>
           </button>
         </div>
-        <div class="col-12 col-md-2 mx-auto">
-          <button class="btn gameBut btn-lg bg-transparent" type="button" onclick="">
+        <!-- quitar button poner div con diseño y la funcion del window. -->
+        <div class="col-12 col-md-2">
+          <button
+            class="btn gameBut btn-lg bg-transparent"
+            type="button"
+            onclick=""
+          >
             <a class="gameButton" href="../pages/colors.html">Intermedio </a>
           </button>
         </div>
-        <div class="col-12 col-md-2 mx-auto">
-          <button class="btn gameBut btn-lg bg-transparent" type="button" onclick="">
+        <div class="col-12 col-md-2">
+          <button
+            class="btn gameBut btn-lg bg-transparent"
+            type="button"
+            onclick=""
+          >
             <a class="gameButton" href="../pages/colors.html">Avanzado </a>
           </button>
         </div>
