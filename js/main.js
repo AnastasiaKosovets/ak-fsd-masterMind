@@ -14,8 +14,8 @@ let choose = document.getElementById("chooseColors");
 let playerNAme = sessionStorage.getItem("playerNameIs");
 choose.innerHTML = `Hola ${playerNAme}, escoge tus colores`;
 
-
 const screenLevel = () => {
-    window.location.href = "../pages/colors.html";
-
+    window.location.href = "../pages/colors.html"
 }
+
+
