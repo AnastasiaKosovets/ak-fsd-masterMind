@@ -64,6 +64,21 @@ body {
     margin: 1em;
 }
 
+.square {
+    margin: 0;
+    padding: 0;
+    height: 10em;
+    width: 10em;
+    margin-bottom: 5em;
+    /* background-color: #ff00de; */
+    box-shadow: 0em 0em 0.5em 0.1em white;
+}
+
+/* .secondColors, .thirdColors {
+    display: none;
+} */
+
+
 /* .chooseColor {
     display: ;
 } */
