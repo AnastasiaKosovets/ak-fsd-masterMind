@@ -9,7 +9,7 @@ let arrayChosenColours = [];
 function startup(event) {
     arrayColorPicker.map(
         (element) => {
-            element.value = "#8a2be2";
+            element.value = "#FEA1A1";
             element.addEventListener("input", (event) => updateFirst(event, element), false);
             element.select();
         }
@@ -31,12 +31,11 @@ console.log(arrayChosenColours);
 // }
 
 
-
-
 const screenLevel1 = () => {
     sessionStorage.setItem("forLevel", "hello1");
     window.location.href = "./colors.html";
 }
+
 const screenLevel2 = () => {
     sessionStorage.setItem("forLevel", "hello2");
     window.location.href = "./colors.html";
@@ -45,7 +44,6 @@ const screenLevel3 = () => {
     sessionStorage.setItem("forLevel", "hello3");
     window.location.href = "./colors.html";
 }
-
 
 let selectThisLevel = sessionStorage.getItem("forLevel");
 let selectRes = document.getElementById(selectThisLevel);
