@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-body {
+body, .background {
     background-color: rgb(26, 26, 26);
 }
 
@@ -72,6 +72,13 @@ body {
     margin-bottom: 5em;
     box-shadow: 0em 0em 0.5em 0.1em white;
 }
+
+.colorPk {
+    border-radius: 50%;
+}
+/* .aboutColors{
+    overflow-x: hidden;
+} */
 
 #hello1, #hello2, #hello3 {
     display: none;

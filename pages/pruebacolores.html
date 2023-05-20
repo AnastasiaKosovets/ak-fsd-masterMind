@@ -1,88 +1,130 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>masterMain</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masterMind</title>
     <link
       async
       href="https://fonts.googleapis.com/css?family=Warnes"
       data-generated="http://enjoycss.com"
       rel="stylesheet"
-      type="text/css"
-    />
+      type="text/css"/>
     <link
-      rel="shortcut icon"
-      href="./img/logoGamePrueba.png"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
-    <!-- <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="card d-flex justify-content-center bg-transparent border-0">
-          <div class="card-body ms-5 master">
-            <a href="../index.html"></a>
-            <p class="text-center col-8 col-md-11">--- masterMind ---</p>
-          </div>
+    rel="shortcut icon"
+    href="./img/logoGamePrueba.png"
+    type="image/x-icon"/>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+
+  <!--  Aquí probe recrear la pagina de colores y vincularla a un js a parte, por que me di cuenta que no me funcionaba bien el mio justo en esta parte.
+  averiguar el POR QUE -->
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="card d-flex justify-content-center bg-transparent border-0">
+        <div class="card-body ms-5 master">
+          <a href="../index.html"></a>
+          <p class="text-center col-8 col-md-11">--- masterMind ---</p>
         </div>
       </div>
-      <div class="row d-flex justify-content-center mb-3">
-        <div class="col-10 col-md-10 d-flex justify-content-center">
-          <a href="../index.html" class="d-flex justify-content-center">
-            <img
-              src="../img/logoGamePrueba.png"
-              class="gitLogo col-8 col-md-8"
-              alt="logo GitHub"
-            />
-          </a>
-        </div>
+    </div>
+    <div class="row d-flex justify-content-center mb-3">
+      <div class="col-10 col-md-10 d-flex justify-content-center">
+        <a href="../index.html" class="d-flex justify-content-center">
+          <img
+            src="../img/logoGamePrueba.png"
+            class="gitLogo col-8 col-md-8"
+            alt="logo GitHub"
+          />
+        </a>
       </div>
-      <div class="row d-flex justify-content-center text-center">
-        <div class="col master">
-          <p>Escoge los colores</p>
-        </div>
+    </div>
+    <div class="row d-flex justify-content-center text-center">
+      <div class="col master">
+        <p>Escoge los colores</p>
       </div>
-      <div class="row row-cols-2 row-cols-md-4 m-0" id="hello1">
-        <div
-          class="col d-flex justify-content-between"
-        >
-          <div class="square" id="firstColors">1</div>
+    </div>
+
+         <!-- BEGINNER -->
+        <div class="row row-cols-2" id="hello1">
+            <div class="col-md-3 d-flex flex-column align-items-center p-0">
+                <div class="m-3 m-md-5 square" id="squareA"></div>
+                <input type="color" class="colorpicker" id="A"/>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center p-0">
+                <div class="m-3 m-md-5 square" id="squareA1"></div>
+                <input type="color" class="colorpicker" id="A1"/>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center p-0">
+                <div class="m-3 m-md-5 square" id="squareA2"></div>
+                <input type="color" class="colorpicker" id="A2"/>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center p-0">
+                <div class="m-3 m-md-5 square" id="squareA3"></div>
+                <input type="color" class="colorpicker" id="A3"/>
+            </div>
         </div>
-        <div
-          class="col d-flex align-items-center firstLineC"
-          id="firstColorsLine"
-        >
-          <div class="square" id="firstColors">2</div>
+
+        <!-- MEDIUM -->
+        <div class="row row-cols-2 row-cols-md-5" id="hello2">
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareB"></div>
+                <input type="color" class="colorpicker" id="B"/>
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareB1"></div>
+                <input type="color" class="colorpicker" id="B1"/>
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareB2"></div>
+                <input type="color" class="colorpicker" id="B2"/>
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareB3"></div>
+                <input type="color" class="colorpicker" id="B3"/>
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareB4"></div>
+                <input type="color" class="colorpicker" id="B4"/>
+            </div>
         </div>
-        <div
-          class="col d-flex align-items-center firstLineC"
-          id="firstColorsLine"
-        >
-          <div class="square" id="firstColors">3</div>
+
+        <!-- ADVANCED -->
+        <div class="row row-cols-2 row-cols-md-6" id="advancedRow">
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareC"></div>
+                <input type="color" class="colorpicker" id="C"/>
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareC1"></div>
+                <input type="color" class="colorpicker" id="C1"/>
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareC2"></div>
+                <input type="color" class="colorpicker" id="C2"/>
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareC3"></div>
+                <input type="color" class="colorpicker" id="C3"/>
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareC4"></div>
+                <input type="color" class="colorpicker" id="C4"/>
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+                <div class="m-3 m-md-5 square" id="squareC5"></div>
+                <input type="color" class="colorpicker" id="C5"/>
+            </div>
         </div>
-        <div
-          class="col d-flex align-items-center firstLineC"
-          id="firstColorsLine"
-        >
-          <div class="square" id="firstColors">4</div>
-        </div>
-      </div>
-      
-    </div> -->
-    
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../js/main.js"></script>
-  </body>
+
+    </div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="../js/level.js"></script>
+</body>
 </html>
