@@ -37,8 +37,12 @@ body, .background {
     text-decoration: none;
 }
 
-.gameButton:hover, .howToPlayButton:hover, .inputName {
+.gameButton:hover, .howToPlayButton:hover, .inputName:hover, .play:hover {
     color: #ed7872;
+}
+
+.card-play, .play {
+    box-shadow: 0em 0em 0.5em 0.1em rgb(140, 46, 248);
 }
 
 .circle{
@@ -76,9 +80,6 @@ body, .background {
 .colorPk {
     border-radius: 50%;
 }
-/* .aboutColors{
-    overflow-x: hidden;
-} */
 
 #beginnerRow, #mediumRow, #advancedRow {
     display: none;
