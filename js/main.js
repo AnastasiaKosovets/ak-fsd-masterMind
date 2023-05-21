@@ -32,7 +32,7 @@ console.log(arrayChosenColours);
 
 
 const screenLevel1 = () => {
-    sessionStorage.setItem("forLevel", "beginnerRow");
+    sessionStorage.setItem("forLevel", "beginnerRow", "beginnerGif");
     window.location.href = "./colors.html";
 }
 
