@@ -32,16 +32,16 @@ console.log(arrayChosenColours);
 
 
 const screenLevel1 = () => {
-    sessionStorage.setItem("forLevel", "hello1");
+    sessionStorage.setItem("forLevel", "beginnerRow");
     window.location.href = "./colors.html";
 }
 
 const screenLevel2 = () => {
-    sessionStorage.setItem("forLevel", "hello2");
+    sessionStorage.setItem("forLevel", "mediumRow");
     window.location.href = "./colors.html";
 }
 const screenLevel3 = () => {
-    sessionStorage.setItem("forLevel", "hello3");
+    sessionStorage.setItem("forLevel", "advancedRow");
     window.location.href = "./colors.html";
 }
 
@@ -70,10 +70,6 @@ let playerNAme = sessionStorage.getItem("playerNameIs");
 choose.innerHTML = `Hola ${playerNAme}, escoge un nivel`;
 
 // ------------------------ trying save annd change screen of the levels
-
-
-
-
 
 // const screenLevel2 = () => {
 //     sessionStorage.setItem("forLevel", "hello2");

@@ -80,7 +80,7 @@ body, .background {
     overflow-x: hidden;
 } */
 
-#hello1, #hello2, #hello3 {
+#beginnerRow, #mediumRow, #advancedRow {
     display: none;
 }
 
