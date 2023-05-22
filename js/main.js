@@ -10,13 +10,13 @@ function startup(event) {
     arraypicker.map(
         (element) => {
             element.value = "#FEA1A1";
-            element.addEventListener("input", (event) => updateFirst(event, element), false);
+            element.addEventListener("input", (event) => updateColor(event, element), false);
             element.select();
         }
     )
 }
 
-const updateFirst = (event, element) => {
+const updateColor = (event, element) => {
     let colorSquare = document.getElementById(`square${element.id}`);
     colorSquare.style.backgroundColor = event.target.value;
     let color = getComputedStyle(colorSquare).backgroundColor;
@@ -25,8 +25,8 @@ const updateFirst = (event, element) => {
 
 console.log(arrayMyColor);
 
-const saveChosenColours = () => {
-    sessionStorage.setItem("chosenColours", JSON.stringify(arrayMyColor));
+const saveMyColor = () => {
+    sessionStorage.setItem("myColor", JSON.stringify(arrayMyColor));
     window.location.href = "./game.html";
 }
 
