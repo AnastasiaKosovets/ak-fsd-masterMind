@@ -4,7 +4,7 @@ window.addEventListener("load", startup, false);
 
 let picker = document.getElementsByClassName("picker");
 let arraypicker = Array.from(picker);
-let arrayChosenColours = [];
+let arrayMyColor = [];
 
 function startup(event) {
     arraypicker.map(
@@ -20,13 +20,13 @@ const updateFirst = (event, element) => {
     let colorSquare = document.getElementById(`square${element.id}`);
     colorSquare.style.backgroundColor = event.target.value;
     let color = getComputedStyle(colorSquare).backgroundColor;
-    arrayChosenColours[element.id] = color;
+    arrayMyColor[element.id] = color;
 }
 
-console.log(arrayChosenColours);
+console.log(arrayMyColor);
 
 const saveChosenColours = () => {
-    sessionStorage.setItem("chosenColours", JSON.stringify(arrayChosenColours));
+    sessionStorage.setItem("chosenColours", JSON.stringify(arrayMyColor));
     window.location.href = "./game.html";
 }
 
