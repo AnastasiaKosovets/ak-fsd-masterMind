@@ -23,13 +23,14 @@ const updateFirst = (event, element) => {
     arrayChosenColours[element.id] = color;
 }
 
-console.log(arrayChosenColours);
+// console.log(arrayChosenColours);
 
 // const saveChosenColours = () => {
 //     sessionStorage.setItem("chosenColours", JSON.stringify(arrayChosenColours));
 //     window.location.href = "./game.html";
 // }
 
+// -------------- Function that save and change screen of the levels
 
 const screenLevel1 = () => {
     sessionStorage.setItem("forLevel", "beginnerRow");
@@ -70,22 +71,8 @@ let choose = document.getElementById("chooseColors");
 let playerNAme = sessionStorage.getItem("playerNameIs");
 choose.innerHTML = `Hola ${playerNAme}, escoge un nivel`;
 
-// ------------------------ trying save annd change screen of the levels
 
-// const screenLevel2 = () => {
-//     sessionStorage.setItem("forLevel", "hello2");
-//     window.location.href = "./colors.html";
-// }
 
-// const screenLevel3 = () => {
-//     sessionStorage.setItem("forLevel", "hello3");
-//     window.location.href = "./colors.html";
-// }
-// window.onload = (event) => {
-//     let selectThisLevel = sessionStorage.getItem("forLevel");
-//     let levelRes = document.getElementById(selectThisLevel);
-//     levelRes.style.display = "flex";
-// }
 
 
 
