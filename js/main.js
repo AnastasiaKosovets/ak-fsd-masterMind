@@ -1,3 +1,31 @@
+// ------- Function that save and change screen to Game Board
+
+const screenBeginnerBoard = () => {
+    sessionStorage.setItem("forBoard", "beginnerBoard");
+    window.location.href = "./readyToPlay.html"
+}
+
+const screenMediumBoard = () => {
+    sessionStorage.setItem("forBoard", "mediumBoard");
+    window.location.href = "./readyToPlay.html"
+}
+
+const screenAdvancedBoard = () => {
+    sessionStorage.setItem("forBoard", "advancedBoard"),
+    window.location.href = "./readyToPlay.html"
+}
+
+let selectThisBoard = sessionStorage.getItem("forBoard");
+let boardRes = document.getElementById(selectThisBoard);
+
+if (boardRes){
+    boardRes.style.display = "flex";
+}
+
+// window.onload = (event) => {
+//     boardRes.style.display = "flex";
+// }
+
 // --------------- color picker
 
 window.addEventListener("load", startup, false);
@@ -70,6 +98,7 @@ const savePlayerName = () => {
 let choose = document.getElementById("chooseColors");
 let playerNAme = sessionStorage.getItem("playerNameIs");
 choose.innerHTML = `Hola ${playerNAme}, escoge un nivel`;
+
 
 
 

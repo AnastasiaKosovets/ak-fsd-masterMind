@@ -87,6 +87,10 @@ body, .background {
 
 /* Board style */
 
+#beginnerBoard, #mediumBoard, #advancedBoard {
+    display: none;
+}
+
 .squareGameC {
     height: 5em;
     width: 16em;
