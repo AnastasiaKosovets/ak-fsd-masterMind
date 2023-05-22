@@ -2,12 +2,12 @@
 
 window.addEventListener("load", startup, false);
 
-let colorPicker = document.getElementsByClassName("colorpicker");
-let arrayColorPicker = Array.from(colorPicker);
+let picker = document.getElementsByClassName("picker");
+let arraypicker = Array.from(picker);
 let arrayChosenColours = [];
 
 function startup(event) {
-    arrayColorPicker.map(
+    arraypicker.map(
         (element) => {
             element.value = "#FEA1A1";
             element.addEventListener("input", (event) => updateFirst(event, element), false);
@@ -23,12 +23,12 @@ const updateFirst = (event, element) => {
     arrayChosenColours[element.id] = color;
 }
 
-// console.log(arrayChosenColours);
+console.log(arrayChosenColours);
 
-// const saveChosenColours = () => {
-//     sessionStorage.setItem("chosenColours", JSON.stringify(arrayChosenColours));
-//     window.location.href = "./game.html";
-// }
+const saveChosenColours = () => {
+    sessionStorage.setItem("chosenColours", JSON.stringify(arrayChosenColours));
+    window.location.href = "./game.html";
+}
 
 // -------------- Function that save and change screen of the levels
 
@@ -69,7 +69,7 @@ const savePlayerName = () => {
 
 let choose = document.getElementById("chooseColors");
 let playerNAme = sessionStorage.getItem("playerNameIs");
-choose.innerHTML = `Hola ${playerNAme}, escoge un nivel`;
+// choose.innerHTML = `Hola ${playerNAme}, escoge un nivel`;
 
 
 
