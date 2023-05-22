@@ -60,8 +60,9 @@ const savePlayerName = () => {
     if(player != "" && player != null){
         sessionStorage.setItem("playerNameIs", player);
         window.location.href = "../pages/level.html";
-    }else {
-        alert("Nombre obligatorio!!")
+    } else {
+        alert("Nombre obligatorio!!");
+        window.location.href = "../pages/game.html";
     } 
 }
 

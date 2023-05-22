@@ -85,4 +85,101 @@ body, .background {
     display: none;
 }
 
+/* beginner board */
 
+.grid-container {
+    width: 20em;
+    box-shadow: 0em 0em 0.5em 0.1em rgb(243, 103, 236);
+}
+
+.grid-row {
+    display: flex; 
+}
+
+.grid-item {
+    border: solid 0.1em rebeccapurple;
+    height: 4em;
+    width: 4em;
+    margin: 0.5em;
+    margin-top: 0.8em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.grid-container1 {
+    width: 25em;
+}
+
+.grid-row1 {
+    display: flex;
+    height: 5.4em;
+    
+}
+
+.grid-item1 {
+    border: solid 0.1em rebeccapurple;
+    height: 2em;
+    width: 2em;
+    margin: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.grid-container-medium {
+    width: 25em;
+    box-shadow: 0em 0em 0.5em 0.1em rgb(243, 103, 236);
+}
+
+.grid-row-medium {
+    display: flex; 
+}
+
+.grid-item-medium {
+    border: solid 0.1em rebeccapurple;
+    height: 4em;
+    width: 4em;
+    margin: 0.5em;
+    margin-top: 0.8em;
+    border-radius: 1em;
+    text-align: center;
+}
+.grid-container1-medium {
+    width: em;
+}
+
+.grid-row1-medium {
+    display: flex;
+    height: 5.4em;
+    
+}
+
+.grid-item1-medium {
+    border: solid 0.1em rebeccapurple;
+    height: 2em;
+    width: 2em;
+    margin: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.grid-container-verify1 {
+    width: 12em;
+}
+
+.grid-row-verify1 {
+    display: flex;
+    height: 4.4em;
+    
+}
+
+.grid-item-verify1 {
+    border: solid 0.1em rebeccapurple;
+    height: 2em;
+    width: 2em;
+    margin: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    text-align: center;
+}
