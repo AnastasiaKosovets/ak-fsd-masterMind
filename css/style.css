@@ -85,6 +85,47 @@ body, .background {
     display: none;
 }
 
+
+/* pruebas tablero dinámico */
+
+
+.containerR {
+    display: flex;
+    justify-content: center;
+}
+.squareR {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    box-shadow: 0em 0em 0.5em 0.1em rgb(0, 113, 128);
+    margin: 0.5em;
+    margin-right: 1em;
+  }
+
+  .grid {
+    display: grid;
+    margin-top: 0.8em;
+    grid-template-columns: repeat(2, 1em);
+    grid-template-rows: repeat(2, 1em);
+    gap: 0.5em;
+    height: 2em;
+    width: 2em;
+  }
+
+  .grid-item {
+    box-shadow: 0em 0em 0.5em 0.1em white;
+    border-radius: 50%;
+  }
+  /* .inner-square {
+    display: grid;
+    width: 1em;
+    height: 1em;
+    background-color: #ed7872;
+    margin: 0.5em;
+} */
+
+
+
 /* Board style */
 
 #beginnerBoard, #mediumBoard, #advancedBoard {

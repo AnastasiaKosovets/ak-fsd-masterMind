@@ -1,30 +1,27 @@
-// ------- Function that save and change screen to Game Board
+// ------- Function that save and change screen to Game Board depends of level
 
-const screenBeginnerBoard = () => {
-    sessionStorage.setItem("forBoard", "beginnerBoard");
-    window.location.href = "./readyToPlay.html"
-}
+// const screenBeginnerBoard = () => {
+//     sessionStorage.setItem("forBoard", "beginnerBoard");
+//     window.location.href = "./readyToPlay.html"
+// }
 
-const screenMediumBoard = () => {
-    sessionStorage.setItem("forBoard", "mediumBoard");
-    window.location.href = "./readyToPlay.html"
-}
+// const screenMediumBoard = () => {
+//     sessionStorage.setItem("forBoard", "mediumBoard");
+//     window.location.href = "./readyToPlay.html"
+// }
 
-const screenAdvancedBoard = () => {
-    sessionStorage.setItem("forBoard", "advancedBoard"),
-    window.location.href = "./readyToPlay.html"
-}
+// const screenAdvancedBoard = () => {
+//     sessionStorage.setItem("forBoard", "advancedBoard"),
+//     window.location.href = "./readyToPlay.html"
+// }
 
-let selectThisBoard = sessionStorage.getItem("forBoard");
-let boardRes = document.getElementById(selectThisBoard);
+// let selectThisBoard = sessionStorage.getItem("forBoard");
+// let boardRes = document.getElementById(selectThisBoard);
 
-if (boardRes){
-    boardRes.style.display = "flex";
-}
-
-// window.onload = (event) => {
+// if (boardRes){
 //     boardRes.style.display = "flex";
 // }
+
 
 // --------------- color picker
 
@@ -77,12 +74,12 @@ const screenLevel3 = () => {
 let selectThisLevel = sessionStorage.getItem("forLevel");
 let selectRes = document.getElementById(selectThisLevel);
 
-window.onload = (event) => {
+if (selectRes){
     selectRes.style.display = "flex";
-};
-
+}
 
 // Here we save to sessionStorage gamer Name
+
 const savePlayerName = () => {
 
     let player = document.getElementById("name").value;
@@ -98,10 +95,4 @@ const savePlayerName = () => {
 let choose = document.getElementById("chooseColors");
 let playerNAme = sessionStorage.getItem("playerNameIs");
 choose.innerHTML = `Hola ${playerNAme}, escoge un nivel`;
-
-
-
-
-
-
 
