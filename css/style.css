@@ -149,9 +149,9 @@ body, .background {
 
 /* Board style */
 
-/* #beginnerBoard, #mediumBoard, #advancedBoard {
+#beginnerBoard, #mediumBoard, #advancedBoard {
     display: none;
-} */
+}
 
 .squareGameC {
     height: 5em;
