@@ -1,28 +1,3 @@
-// ------- Function that save and change screen to Game Board depends of level
-
-// const screenBeginnerBoard = () => {
-//     sessionStorage.setItem("forBoard", "beginnerBoard");
-//     window.location.href = "./readyToPlay.html"
-// }
-
-// const screenMediumBoard = () => {
-//     sessionStorage.setItem("forBoard", "mediumBoard");
-//     window.location.href = "./readyToPlay.html"
-// }
-
-// const screenAdvancedBoard = () => {
-//     sessionStorage.setItem("forBoard", "advancedBoard"),
-//     window.location.href = "./readyToPlay.html"
-// }
-
-// let selectThisBoard = sessionStorage.getItem("forBoard");
-// let boardRes = document.getElementById(selectThisBoard);
-
-// if (boardRes){
-//     boardRes.style.display = "flex";
-// }
-
-
 // --------------- color picker
 
 window.addEventListener("load", startup, false);

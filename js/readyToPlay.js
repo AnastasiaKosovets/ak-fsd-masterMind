@@ -1,6 +1,7 @@
 // new board style
+const createMyFills = () => {
 
-let containerR = document.getElementById("containerR");
+let containerR = document.getElementById("container");
 
 for (let i = 0; i < 4; i++) {
     let squareR = document.createElement("div");
@@ -17,27 +18,35 @@ for ( let i = 0; i < 4; i++){
 }
 containerR.appendChild(grid);
 
+}
+createMyFills();
+
+
+
+
 // beginner level == beginner board
 
 function screenBeginnerBoard() {
 
-    let container = document.getElementById("containerR");
+    createMyFills();
 
-    for ( let i = 0; i < 9; i++){
-        for (let i = 0; i < 4; i++) {
-            let squareR = document.createElement("div");
-            squareR.className = "squareR";
-            container.appendChild(squareR);
-        }
-        let grid = document.createElement("div");
-        grid.className = "grid";
+    // let container = document.getElementById("container");
+
+    // for ( let i = 0; i < 9; i++){
+    //     for (let i = 0; i < 4; i++) {
+    //         let squareR = document.createElement("div");
+    //         squareR.className = "squareR";
+    //         container.appendChild(squareR);
+    //     }
+    //     let grid = document.createElement("div");
+    //     grid.className = "grid";
         
-        for ( let i = 0; i < 4; i++){
-            let gridItem = document.createElement("div");
-            gridItem.className = "grid-item";
-            grid.appendChild(gridItem);
-        }
-        container.appendChild(grid);
-    }
-    window.location.href = "./readyToPlay.html"
+    //     for ( let i = 0; i < 4; i++){
+    //         let gridItem = document.createElement("div");
+    //         gridItem.className = "grid-item";
+    //         grid.appendChild(gridItem);
+    //     }
+    //     container.appendChild(grid);
+    // }
+    // window.location.href = "./readyToPlay.html"
 }
