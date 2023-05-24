@@ -1,3 +1,28 @@
+
+// ------- Function that save and change screen to Game Board
+
+const screenBeginnerBoard = () => {
+    sessionStorage.setItem("forBoard", "beginnerBoard");
+    window.location.href = "./readyToPlay.html"
+};
+
+const screenMediumBoard = () => {
+    sessionStorage.setItem("forBoard", "mediumBoard");
+    window.location.href = "./readyToPlay.html"
+}
+
+const screenAdvancedBoard = () => {
+    sessionStorage.setItem("forBoard", "advancedBoard"),
+    window.location.href = "./readyToPlay.html"
+}
+
+let selectThisBoard = sessionStorage.getItem("forBoard");
+let boardRes = document.getElementById(selectThisBoard);
+
+if (boardRes){
+    boardRes.style.display = "flex";
+}
+
 // --------------- color picker
 
 window.addEventListener("load", startup, false);
@@ -34,6 +59,8 @@ console.log(arrayMyColor);
 
 const screenLevel1 = () => {
     sessionStorage.setItem("forLevel", "beginnerRow");
+    // let myColorGameBoard = sessionStorage.getItem("myColor");
+    // colorArray = JSON.parse(myColorGameBoard);
     window.location.href = "./colors.html";
 }
 
@@ -52,6 +79,20 @@ let selectRes = document.getElementById(selectThisLevel);
 if (selectRes){
     selectRes.style.display = "flex";
 }
+
+// ---- Transport colors to tha game board -----
+
+// let begginerBoardColor = document.getElementById("beginnerBoard");
+// const colorButtons = document.querySelectorAll("#beginnerBoard .circleC-myColor");
+// let myColorGameBoard = sessionStorage.getItem("myColor");
+// let colorArray = JSON.parse(myColorGameBoard);
+
+
+// for( let i = 0; i < colorArray.length; i++) {
+//     colorButtons[i].style.backgroundColor = colorArray[i];
+// }
+
+
 
 // Here we save to sessionStorage gamer Name
 

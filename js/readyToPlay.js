@@ -26,11 +26,12 @@ for ( let i = 0; i < 4; i++){
     grid.appendChild(gridItem)
 
 } 
-    containerR.appendChild(fila);
-    
-}
+    containerR.appendChild(fila); 
+};
 
-createMyFills();
+//  intento de comparar con screenBeginnerBoard
+
+
 
 
 

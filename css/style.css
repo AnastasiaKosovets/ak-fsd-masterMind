@@ -77,6 +77,10 @@ body, .background {
     border-radius: 50%;
 }
 
+#beginnerRow, #mediumRow, #advancedRow {
+    display: none;
+}
+
 /* pruebas tablero dinámico */
 
 .fatherDiv{
@@ -156,7 +160,7 @@ body, .background {
     box-shadow: 0em 0em 0.5em 0.1em rgba(236, 37, 209, 0.87);
 }
 
-.circleC {
+.circleC, .circleC-myColor {
     height: 3em;
     width: 3em;
     margin: 0.1em;
