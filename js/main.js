@@ -25,7 +25,7 @@ const updateColor = (event, element) => {
 
 const saveMyColor = () => {
     sessionStorage.setItem("myColor", JSON.stringify(arrayMyColor));
-    window.location.href = "./game.html";
+    window.location.href = "./readyToPlay.html";
 }
 
 console.log(arrayMyColor);
