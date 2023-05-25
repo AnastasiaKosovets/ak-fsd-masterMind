@@ -29,7 +29,27 @@ for ( let i = 0; i < 4; i++){
     containerR.appendChild(fila); 
 };
 
+
 //  intento de comparar con screenBeginnerBoard
+
+let dificultad = sessionStorage.getItem("forLevel");
+
+//  console.log(dificultad);
+
+ if (dificultad === "beginnerRow") {
+    for (let i = 0; i < 4; i++) {
+      createMyFills();
+    }
+  } else if (dificultad === "mediumRow") {
+    for (let i = 0; i < 5; i++) {
+      createMyFills();
+    }
+  } else if (dificultad === "advancedRow") {
+    for (let i = 0; i < 6; i++) {
+      createMyFills();
+    }
+  }
+
 
 
 
