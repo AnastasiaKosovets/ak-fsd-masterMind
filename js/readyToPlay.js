@@ -73,20 +73,59 @@ colors.map((color, index) => {
 
 // pruebas combinacion secreta
 
+// let randomColors = [];
+
+// const secretAnswerColor = () => {
+
+// //  volvemos a declarar la variable, por que si no, no me la reconocía
+
+//     let transformToArrayColors = Object.values(colorsFromLocalStorage);
+
+// //  creamos un for, que recorre la longitud del array de los colores elegidos y de estos saca el metodo random
+
+//     for( let i = 0; i < transformToArrayColors.length; i++){
+//         let randomMethod = Math.floor(Math.random() * (transformToArrayColors.length));
+//         randomColors.push(transformToArrayColors[randomMethod]);
+//     }
+// }
+// secretAnswerColor();
+// // console.log(randomColors);
+
+// // prueba de asignar los colores generados por el Math.random a los circulos de la pagina readyToPlay
+
+// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[0];
+// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[1];
+// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[2];
+// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[3];
+// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[4];
+// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[5];
+
+// console.log(randomColors);
+
+//  segunda prueba combinación secreta
+
 let randomColors = [];
 
 const secretAnswerColor = () => {
-
     let transformToArrayColors = Object.values(colorsFromLocalStorage);
-
-    for( let i = 0; i < transformToArrayColors.length; i++){
-        let randomMethod = Math.floor(Math.random() * (transformToArrayColors.length));
-        randomColors.push(transformToArrayColors[randomMethod]);
+    let indexArray = [...Array(transformToArrayColors.length).keys()];
+    for ( let i = 0; i < transformToArrayColors.length; i++){
+        let randomIndex = Math.floor(Math.random() * indexArray.length);
+        let randomColorIndex = indexArray[randomIndex];
+        randomColors.push(transformToArrayColors[randomColorIndex]);
+        indexArray.splice(randomIndex, 1);
     }
 }
 secretAnswerColor();
-console.log(randomColors);
 
+// pintamos con colores aleatorios los circulos
+
+document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[0];
+document.getElementById("secretColorAnswer2").style.backgroundColor = randomColors[1];
+document.getElementById("secretColorAnswer3").style.backgroundColor = randomColors[2];
+document.getElementById("secretColorAnswer4").style.backgroundColor = randomColors[3];
+document.getElementById("secretColorAnswer5").style.backgroundColor = randomColors[4];
+document.getElementById("secretColorAnswer6").style.backgroundColor = randomColors[5];
 
 
 
