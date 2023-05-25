@@ -29,7 +29,6 @@ for ( let i = 0; i < 4; i++){
     containerR.appendChild(fila); 
 };
 
-
 //  intento de comparar con screenBeginnerBoard
 
 let dificultad = sessionStorage.getItem("forLevel");

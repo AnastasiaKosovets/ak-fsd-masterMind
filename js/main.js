@@ -1,4 +1,3 @@
-
 // --------------- color picker
 
 window.addEventListener("load", startup, false);
@@ -72,8 +71,6 @@ const screenAdvancedBoard = () => {
 
 const screenLevel1 = () => {
     sessionStorage.setItem("forLevel", "beginnerRow");
-    // let myColorGameBoard = sessionStorage.getItem("myColor");
-    // colorArray = JSON.parse(myColorGameBoard);
     window.location.href = "./colors.html";
 }
 
