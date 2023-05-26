@@ -23,7 +23,7 @@ body, .background {
     text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
 }
 
-.game, .howToPlay, .text, .name, .inputName, .cardChoiseLevel, .gameBut, .winnerText {
+.game, .howToPlay, .text, .name, .inputName, .cardChoiseLevel, .gameBut, .winnerText, .checkMy {
     box-shadow: 0em 0em 0.5em 0.1em rgb(243, 103, 236);
     color: rgba(255, 255, 255, 0.762);
 }
@@ -33,7 +33,7 @@ body, .background {
     text-decoration: none;
 }
 
-.gameButton:hover, .howToPlayButton:hover, .inputName:hover, .play:hover, .verifyButton {
+.gameButton:hover, .howToPlayButton:hover, .inputName:hover, .play:hover, .verifyButton, .checkMy {
     color: #ed7872;
 }
 
@@ -139,6 +139,9 @@ body, .background {
 
 #beginnerBoard, #mediumBoard, #advancedBoard {
     display: none;
+}
+.checkMy {
+    border-radius: 1em;
 }
 
 .squareGameC {

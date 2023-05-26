@@ -127,7 +127,16 @@ document.getElementById("secretColorAnswer4").style.backgroundColor = randomColo
 document.getElementById("secretColorAnswer5").style.backgroundColor = randomColors[4];
 document.getElementById("secretColorAnswer6").style.backgroundColor = randomColors[5];
 
+//  prueba de pintar cada circulo con los colores elegidos
 
+let squareElements = document.querySelectorAll(".squareR");
+
+squareElements.forEach((square, index) => {
+    square.addEventListener("click", () => {
+        let selectedColor = colors[index];
+        square.style.backgroundColor = selectedColor;
+    });
+});
 
 
   
