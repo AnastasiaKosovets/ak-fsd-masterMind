@@ -4,62 +4,65 @@ let containerR = document.getElementById("containerR");
 
 const createMyFills = () => {
 
-let fila = document.createElement("div");
-fila.className = "fila";
+    let fila = document.createElement("div");
+    fila.className = "fila";
 
-for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 4; i++) {
 
-    let squareR = document.createElement("div");
-    squareR.className = "squareR";
-    fila.appendChild(squareR);
-}
+        let squareR = document.createElement("div");
+        squareR.className = "squareR";
+        fila.appendChild(squareR);
+    }
 
-let grid = document.createElement("div");
-grid.className = "grid";
-fila.appendChild(grid);
+    let grid = document.createElement("div");
+    grid.className = "grid";
+    fila.appendChild(grid);
 
-for ( let i = 0; i < 4; i++){
+    for (let i = 0; i < 4; i++) {
 
-    let gridItem = document.createElement("div");
-    gridItem.className = "grid-item";
-    grid.appendChild(gridItem)
+        let gridItem = document.createElement("div");
+        gridItem.className = "grid-item";
+        grid.appendChild(gridItem)
 
-} 
-    containerR.appendChild(fila); 
+    }
+    containerR.appendChild(fila);
 };
 
-//  intento de comparar con screenBeginnerBoard
+//  Según el nivel te hace el tablero correspondiente
 
 let dificultad = sessionStorage.getItem("forLevel");
 
-//  console.log(dificultad);
-
- if (dificultad === "beginnerRow") {
+if (dificultad === "beginnerRow") {
     for (let i = 0; i < 10; i++) {
-      createMyFills();
+        createMyFills();
     }
-  } else if (dificultad === "mediumRow") {
+} else if (dificultad === "mediumRow") {
     for (let i = 0; i < 8; i++) {
-      createMyFills();
+        createMyFills();
     }
-  } else if (dificultad === "advancedRow") {
+} else if (dificultad === "advancedRow") {
     for (let i = 0; i < 6; i++) {
-      createMyFills();
+        createMyFills();
     }
-  }
+}
 
-//   pruebas para guardar los colores seleccionados y pasarlos a mis divs
+//  Guardamos los colores seleccionados y pasamos a los divs
 
-//  prueba de pintar cada circulo con los colores elegidos
+//  Prueba de pintar cada circulo con los colores elegidos
+
 let squareElements = document.querySelectorAll(".squareR");
+
 // Este es el contenedor donde se van a agregar los colores en el HTML.
+
 let myColorsForPlayElement = document.querySelector("#myColorsForPlay > div");
 let colorsFromLocalStorage = JSON.parse(sessionStorage.getItem("myColor"));
 
 //Aquí creamos un array de todos los valores de ese objeto
 
 let colors = Object.values(colorsFromLocalStorage);
-// con el metodo forEach y el evento click ceramos la opcion de seleccionar color del array de colores elegidos dentro de los circulos
+
+// Con el metodo forEach y el evento click ceramos la opcion de seleccionar color del array de colores elegidos dentro de los circulos
+
 squareElements.forEach((square, index) => {
     square.addEventListener("click", () => {
         let currentColorIndex = colors.indexOf(square.style.backgroundColor);
@@ -69,13 +72,13 @@ squareElements.forEach((square, index) => {
 
         let correctAnswerSecretChoise = Array.from(squareElements, el => el.style.backgroundColor);
 
-        if (JSON.stringify(correctAnswerSecretChoise) === JSON.stringify(randomColors)){
+        if (JSON.stringify(correctAnswerSecretChoise) === JSON.stringify(randomColors)) {
             // console.log("has acertado con los colores");
         }
     });
 });
 
-// con los colores disponibles creamos el hueco con su html correspondiente
+// Creamos para los colores disponibles el hueco con su html correspondiente
 
 colors.map((color, index) => {
 
@@ -86,7 +89,7 @@ colors.map((color, index) => {
     myColorsForPlayElement.appendChild(selectedColor);
 });
 
-//  segunda prueba combinación secreta
+//  Segunda prueba combinación secreta
 
 let randomColors = [];
 
@@ -103,30 +106,41 @@ const secretAnswerColor = () => {
 }
 secretAnswerColor();
 
-// pintamos con colores aleatorios los circulos
+// Pintamos con colores aleatorios los circulos
 
 document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[0];
 document.getElementById("secretColorAnswer2").style.backgroundColor = randomColors[1];
 document.getElementById("secretColorAnswer3").style.backgroundColor = randomColors[2];
 document.getElementById("secretColorAnswer4").style.backgroundColor = randomColors[3];
-document.getElementById("secretColorAnswer5").style.backgroundColor = randomColors[4];
-document.getElementById("secretColorAnswer6").style.backgroundColor = randomColors[5];
 
-// comparacion entre mis colores y la respuesta correcta
+// Creando const vinculado al check, para comprobar los colores elegidos con secret answer
 
 const checkMyAnswer = () => {
 
-    let yourCombination = Array.from(squareElements, el => el.style.backgroundColor);
+// Aquí utilice funcion de mapeo que se aplica a cada elemento del NodeList, extrayendo el valor de background de cada elemento
 
-    for ( let i = 0; i < randomColors.length; i++) {
+    let yourCombination = Array.from(squareElements, el => el.style.backgroundColor);
+    let matchedColors = [];
+    let matchedPosicions = [];
+
+    for (let i = 0; i < randomColors.length; i++) {
         if (randomColors[i] === yourCombination[i]) {
-            console.log("has acertado");
-        } else {
-            console.log("has perdido");
+            // esto me sirve para los circulos blancos
+            matchedColors.push(randomColors[i]);
+            // prueba para que me diga que posiciones han coincidido
+            matchedPosicions.push(i);
+            console.log("posiciones que han coincidido:", matchedPosicions);
         }
     }
+    console.log("colores que aparecen en array:", matchedColors);
+    // for (let i = 0; i < randomColors.length; i++) {
+    //     if (yourCombination[i] === randomColors[i]) {
+    //         console.log("has acertado");
+    //     } else {
+    //         console.log("has perdido");
+    //     }
+    // }
 };
+checkMyAnswer();
 
 
-
-  
