@@ -125,16 +125,19 @@ const checkMyAnswer = () => {
     for (let i = 0; i < randomColors.length; i++) {
         if (randomColors[i] === yourCombination[i]) {
             // esto me sirve para los circulos blancos
-            matchedColors.push(i);
+            // matchedColors.push(i);
 
             // prueba para que me diga que posiciones han coincidido
             matchedPosicions.push(i);
             // console.log("posiciones que han coincidido:", matchedPosicions);
         } else if (yourCombination.includes(randomColors[i])) {
+            // asi logro que me saque los colores en sí que coinciden
             matchedColors.push(i);
         }
     }
 
+    //  aqui declaro que: usando la comparación anterior me pinte los circulos pequeños de color rojo
+    // si coincide la posicion y de color blanco si coincide el color en sí, utilizando el metodo includes dentro de un if..else if..else
     gridItems.forEach((gridItem, index) => {
         if(matchedPosicions.includes(index)){
             gridItem.style.backgroundColor = "red";
