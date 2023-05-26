@@ -49,20 +49,19 @@ if (dificultad === "beginnerRow") {
 //  Guardamos los colores seleccionados y pasamos a los divs
 
 //  Prueba de pintar cada circulo con los colores elegidos
-
 let squareElements = document.querySelectorAll(".squareR");
 
 // Este es el contenedor donde se van a agregar los colores en el HTML.
-
 let myColorsForPlayElement = document.querySelector("#myColorsForPlay > div");
 let colorsFromLocalStorage = JSON.parse(sessionStorage.getItem("myColor"));
 
 //Aquí creamos un array de todos los valores de ese objeto
-
 let colors = Object.values(colorsFromLocalStorage);
 
-// Con el metodo forEach y el evento click ceramos la opcion de seleccionar color del array de colores elegidos dentro de los circulos
+// declaro la variable gridItems patra poder recoger id y poder pintarlos en rojo cuando coincida la posicion de color
+let gridItems = document.querySelectorAll(".grid-item");
 
+// Con el metodo forEach y el evento click ceramos la opcion de seleccionar color del array de colores elegidos dentro de los circulos
 squareElements.forEach((square, index) => {
     square.addEventListener("click", () => {
         let currentColorIndex = colors.indexOf(square.style.backgroundColor);
@@ -127,12 +126,24 @@ const checkMyAnswer = () => {
         if (randomColors[i] === yourCombination[i]) {
             // esto me sirve para los circulos blancos
             matchedColors.push(randomColors[i]);
+            
             // prueba para que me diga que posiciones han coincidido
             matchedPosicions.push(i);
-            console.log("posiciones que han coincidido:", matchedPosicions);
+            // console.log("posiciones que han coincidido:", matchedPosicions);
         }
     }
-    console.log("colores que aparecen en array:", matchedColors);
+
+    gridItems.forEach((gridItem, index) => {
+        if(matchedPosicions.includes(index)){
+            gridItem.style.backgroundColor = "red";
+        } else {
+            gridItem.style.backgroundColor = "transparent";
+        }
+    });
+    // console.log("colores que aparecen en array:", matchedColors);
+    // console.log("posiciones que han coincidido:", matchedPosicions);
+
+
     // for (let i = 0; i < randomColors.length; i++) {
     //     if (yourCombination[i] === randomColors[i]) {
     //         console.log("has acertado");
