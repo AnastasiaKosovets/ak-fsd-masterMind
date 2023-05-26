@@ -33,7 +33,7 @@ body, .background {
     text-decoration: none;
 }
 
-.gameButton:hover, .howToPlayButton:hover, .inputName:hover, .play:hover, .verifyButton, .checkMy {
+.gameButton:hover, .howToPlayButton:hover, .inputName:hover, .play:hover, .verifyButton {
     color: #ed7872;
 }
 
@@ -140,8 +140,15 @@ body, .background {
 #beginnerBoard, #mediumBoard, #advancedBoard {
     display: none;
 }
+
 .checkMy {
     border-radius: 1em;
+    cursor: pointer;
+    color: #ed7872;
+}
+
+.checkMy:hover {
+    color: #7e0d6f;;
 }
 
 .squareGameC {

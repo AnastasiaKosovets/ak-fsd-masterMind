@@ -66,6 +66,12 @@ squareElements.forEach((square, index) => {
         let nextColorIndex = (currentColorIndex + 1) % colors.length;
         let nextColor = colors[nextColorIndex];
         square.style.backgroundColor = nextColor;
+
+        let correctAnswerSecretChoise = Array.from(squareElements, el => el.style.backgroundColor);
+
+        if (JSON.stringify(correctAnswerSecretChoise) === JSON.stringify(randomColors)){
+            // console.log("has acertado con los colores");
+        }
     });
 });
 
@@ -106,6 +112,20 @@ document.getElementById("secretColorAnswer4").style.backgroundColor = randomColo
 document.getElementById("secretColorAnswer5").style.backgroundColor = randomColors[4];
 document.getElementById("secretColorAnswer6").style.backgroundColor = randomColors[5];
 
+// comparacion entre mis colores y la respuesta correcta
+
+const checkMyAnswer = () => {
+
+    let yourCombination = Array.from(squareElements, el => el.style.backgroundColor);
+
+    for ( let i = 0; i < randomColors.length; i++) {
+        if (randomColors[i] === yourCombination[i]) {
+            console.log("has acertado");
+        } else {
+            console.log("has perdido");
+        }
+    }
+};
 
 
 
