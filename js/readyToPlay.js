@@ -125,17 +125,21 @@ const checkMyAnswer = () => {
     for (let i = 0; i < randomColors.length; i++) {
         if (randomColors[i] === yourCombination[i]) {
             // esto me sirve para los circulos blancos
-            matchedColors.push(randomColors[i]);
-            
+            matchedColors.push(i);
+
             // prueba para que me diga que posiciones han coincidido
             matchedPosicions.push(i);
             // console.log("posiciones que han coincidido:", matchedPosicions);
+        } else if (yourCombination.includes(randomColors[i])) {
+            matchedColors.push(i);
         }
     }
 
     gridItems.forEach((gridItem, index) => {
         if(matchedPosicions.includes(index)){
             gridItem.style.backgroundColor = "red";
+        } else if(matchedColors.includes(index)) {
+            gridItem.style.backgroundColor = "white";
         } else {
             gridItem.style.backgroundColor = "transparent";
         }
