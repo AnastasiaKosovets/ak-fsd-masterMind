@@ -1,5 +1,3 @@
-// funcion que genera la combina
-
 // new board style
 
 let containerR = document.getElementById("containerR");
@@ -10,6 +8,7 @@ let fila = document.createElement("div");
 fila.className = "fila";
 
 for (let i = 0; i < 4; i++) {
+
     let squareR = document.createElement("div");
     squareR.className = "squareR";
     fila.appendChild(squareR);
@@ -49,8 +48,10 @@ let dificultad = sessionStorage.getItem("forLevel");
     }
   }
 
-  //   pruebas para guardar los colores seleccionados y pasarlos a mis divs
+//   pruebas para guardar los colores seleccionados y pasarlos a mis divs
 
+//  prueba de pintar cada circulo con los colores elegidos
+let squareElements = document.querySelectorAll(".squareR");
 // Este es el contenedor donde se van a agregar los colores en el HTML.
 let myColorsForPlayElement = document.querySelector("#myColorsForPlay > div");
 let colorsFromLocalStorage = JSON.parse(sessionStorage.getItem("myColor"));
@@ -58,49 +59,26 @@ let colorsFromLocalStorage = JSON.parse(sessionStorage.getItem("myColor"));
 //Aquí creamos un array de todos los valores de ese objeto
 
 let colors = Object.values(colorsFromLocalStorage);
+// con el metodo forEach y el evento click ceramos la opcion de seleccionar color del array de colores elegidos dentro de los circulos
+squareElements.forEach((square, index) => {
+    square.addEventListener("click", () => {
+        let currentColorIndex = colors.indexOf(square.style.backgroundColor);
+        let nextColorIndex = (currentColorIndex + 1) % colors.length;
+        let nextColor = colors[nextColorIndex];
+        square.style.backgroundColor = nextColor;
+    });
+});
 
 // con los colores disponibles creamos el hueco con su html correspondiente
 
 colors.map((color, index) => {
+
     let selectedColor = document.createElement("div");
     selectedColor.classList.add("circleC-myColor");
     selectedColor.id = "selectedColorsOfPicker" + index;
     selectedColor.style.backgroundColor = color;
     myColorsForPlayElement.appendChild(selectedColor);
 });
-
-
-
-// pruebas combinacion secreta
-
-// let randomColors = [];
-
-// const secretAnswerColor = () => {
-
-// //  volvemos a declarar la variable, por que si no, no me la reconocía
-
-//     let transformToArrayColors = Object.values(colorsFromLocalStorage);
-
-// //  creamos un for, que recorre la longitud del array de los colores elegidos y de estos saca el metodo random
-
-//     for( let i = 0; i < transformToArrayColors.length; i++){
-//         let randomMethod = Math.floor(Math.random() * (transformToArrayColors.length));
-//         randomColors.push(transformToArrayColors[randomMethod]);
-//     }
-// }
-// secretAnswerColor();
-// // console.log(randomColors);
-
-// // prueba de asignar los colores generados por el Math.random a los circulos de la pagina readyToPlay
-
-// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[0];
-// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[1];
-// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[2];
-// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[3];
-// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[4];
-// document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[5];
-
-// console.log(randomColors);
 
 //  segunda prueba combinación secreta
 
@@ -109,7 +87,8 @@ let randomColors = [];
 const secretAnswerColor = () => {
     let transformToArrayColors = Object.values(colorsFromLocalStorage);
     let indexArray = [...Array(transformToArrayColors.length).keys()];
-    for ( let i = 0; i < transformToArrayColors.length; i++){
+    for (let i = 0; i < transformToArrayColors.length; i++) {
+
         let randomIndex = Math.floor(Math.random() * indexArray.length);
         let randomColorIndex = indexArray[randomIndex];
         randomColors.push(transformToArrayColors[randomColorIndex]);
@@ -127,16 +106,7 @@ document.getElementById("secretColorAnswer4").style.backgroundColor = randomColo
 document.getElementById("secretColorAnswer5").style.backgroundColor = randomColors[4];
 document.getElementById("secretColorAnswer6").style.backgroundColor = randomColors[5];
 
-//  prueba de pintar cada circulo con los colores elegidos
 
-let squareElements = document.querySelectorAll(".squareR");
-
-squareElements.forEach((square, index) => {
-    square.addEventListener("click", () => {
-        let selectedColor = colors[index];
-        square.style.backgroundColor = selectedColor;
-    });
-});
 
 
   

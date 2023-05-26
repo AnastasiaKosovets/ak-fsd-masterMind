@@ -59,14 +59,6 @@ const screenAdvancedBoard = () => {
     dificultad = "screenAdvancedBoard";
 };
 
-// let selectThisBoard = sessionStorage.getItem("forBoard");
-// let boardRes = document.getElementById(selectThisBoard);
-
-// if (boardRes){
-//     boardRes.style.display = "flex";
-// }
-
-
 // -------------- Function that save and change screen of the levels
 
 const screenLevel1 = () => {
