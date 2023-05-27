@@ -61,22 +61,22 @@ let colors = Object.values(colorsFromLocalStorage);
 // declaro la variable gridItems patra poder recoger id y poder pintarlos en rojo cuando coincida la posicion de color
 let gridItems = document.querySelectorAll(".grid-item");
 
-// Con el metodo forEach y el evento click ceramos la opcion de seleccionar color del array de colores elegidos dentro de los circulos
-squareElements.forEach((square, index) => {
-    square.addEventListener("click", () => {
-        let currentColorIndex = colors.indexOf(square.style.backgroundColor);
-        let nextColorIndex = (currentColorIndex + 1) % colors.length;
-        let nextColor = colors[nextColorIndex];
-        square.style.backgroundColor = nextColor;
+// aquí estoy intentando bloquear las filas, para que de momento solo se pueda tranajr sobre la primera
+// utilizando el nth-child y el selector del CSS, para especificar cuales están disponibles para pintar
+const firstRowSquares = document.querySelectorAll(".fila:first-child .squareR")
+// // Con el metodo forEach y el evento click ceramos la opcion de seleccionar color del array de colores elegidos dentro de los circulos
 
-        let correctAnswerSecretChoise = Array.from(squareElements, el => el.style.backgroundColor);
-
-        if (JSON.stringify(correctAnswerSecretChoise) === JSON.stringify(randomColors)) {
-            // console.log("has acertado con los colores");
-        }
-    });
-});
-
+    firstRowSquares.forEach((square, index) => {
+        square.addEventListener("click", () => {
+            let currentColorIndex = colors.indexOf(square.style.backgroundColor);
+            let nextColorIndex = (currentColorIndex + 1) % colors.length;
+            let nextColor = colors[nextColorIndex];
+            square.style.backgroundColor = nextColor;
+    
+            
+        });
+    })
+    
 // Creamos para los colores disponibles el hueco con su html correspondiente
 
 colors.map((color, index) => {
@@ -147,6 +147,15 @@ const checkMyAnswer = () => {
             gridItem.style.backgroundColor = "transparent";
         }
     });
+
+    let correctAnswerSecretChoise = Array.from(firstRowSquares, (el) => el.style.backgroundColor);
+    
+            if (JSON.stringify(correctAnswerSecretChoise) === JSON.stringify(randomColors)) {
+                // console.log("has acertado con los colores");
+                window.location.href = "./winner.html"
+            } else if (JSON.stringify(correctAnswerSecretChoise) != JSON.stringify(randomColors)) {
+                
+            }
     // console.log("colores que aparecen en array:", matchedColors);
     // console.log("posiciones que han coincidido:", matchedPosicions);
 
