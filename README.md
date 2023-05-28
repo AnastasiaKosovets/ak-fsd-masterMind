@@ -4,6 +4,7 @@
 
 ![image](./img/initialPageShot.png)
 
+### You can see the project [*here.*](https://anastasiakosovets.github.io/ak-fsd-masterMind/)
 
 ## Table of Contents
 
