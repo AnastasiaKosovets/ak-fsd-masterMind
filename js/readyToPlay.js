@@ -105,7 +105,6 @@ firstRowSquares.forEach((square) => {
 
 let currentRow = 1;
 
-
 const checkMyAnswer = () => {
 
     // Here use mapping function that is applied to each element of the NodeList, extracting the background value of each element
