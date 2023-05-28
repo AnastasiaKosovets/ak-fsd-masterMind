@@ -80,6 +80,7 @@ const secretAnswerColor = () => {
 };
 
 secretAnswerColor();
+console.log("Colores aleatorios:", randomColors);
 
 // Paint circles with random colors
 document.getElementById("secretColorAnswer1").style.backgroundColor = randomColors[0];

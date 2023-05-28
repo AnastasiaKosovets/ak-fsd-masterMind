@@ -178,6 +178,9 @@ body, .background {
     box-shadow: 0em 0em 0.5em 0.1em rgb(140, 46, 248);
 }
 
+.hidden-circle {
+    display: none;
+}
 .squareCa {
     height: 3em;
     width: 3em;
