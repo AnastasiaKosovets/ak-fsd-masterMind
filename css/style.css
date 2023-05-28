@@ -100,7 +100,7 @@ body, .background {
     display: none;
 }
 
-/* pruebas tablero dinámico */
+/*  Dinamic board style */
 
 .fatherDiv{
     display: flex;
@@ -113,7 +113,7 @@ body, .background {
     justify-content: center;
 }
 
-.fila {
+.rowFil {
     display: flex;
     justify-content: center;
 }
@@ -147,7 +147,7 @@ body, .background {
     flex-direction: column;
 }
 
-/* Board style */
+/* Board part style of the buttons */
 
 #beginnerBoard, #mediumBoard, #advancedBoard {
     display: none;
@@ -170,6 +170,7 @@ body, .background {
     border-radius: 1em;
 }
 
+/* Board part: style of the circles-selected color */
 .circleC, .circleC-myColor {
     height: 2em;
     width: 2em;
@@ -201,6 +202,7 @@ body, .background {
     box-shadow: 0em 0em 0.5em 0.1em rgba(236, 37, 209, 0.87);
 }
 
+/* Pop-Up of input name page style */
 .popUp {
     height: 10em;
     width: 30em;
