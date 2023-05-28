@@ -64,6 +64,28 @@ body, .background {
     margin: 1em;
 }
 
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .col-md-2 {
+        margin: 3em;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+    .gameButRow {
+        margin-right: 8em;
+    }
+  }
+
+@media (min-width: 1367px) {
+    .col-md-2 {
+      flex: 0 0 15%;
+      max-width: 25%;
+      margin: 1em;
+    }
+    .gameButRow {
+      margin-right: 3em;
+    }
+}
+
 .square {
     margin: 0;
     padding: 0;
