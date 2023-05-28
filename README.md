@@ -38,7 +38,7 @@ This game consists of several pages that you can access through steps to follow 
 
 #### Or to the page where you can read information about the game and access the game author's personal page:
 
-> ![image](./img/aboutPage.png)
+> ![image](./img/about.png)
 
 #### Once you have introduced your name, you will be redirected to the level selection page:
 
