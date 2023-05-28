@@ -36,7 +36,7 @@ let myColor = JSON.parse(sessionStorage.getItem("myColor"));
 let transformToArrayColors = [];
 
 let startColorsTransform = () => {
-    for ( const property in myColor){
+    for (const property in myColor) {
         transformToArrayColors.push(myColor[property]);
     }
 }
@@ -48,7 +48,7 @@ const screenBeginnerBoard = () => {
     sessionStorage.setItem("forBoard", "beginnerBoard");
     window.location.href = "./readyToPlay.html";
     difficulty = "screenBeginnerBoard";
-    
+
 };
 
 const screenMediumBoard = () => {
@@ -59,7 +59,7 @@ const screenMediumBoard = () => {
 
 const screenAdvancedBoard = () => {
     sessionStorage.setItem("forBoard", "advancedBoard"),
-    window.location.href = "./readyToPlay.html";
+        window.location.href = "./readyToPlay.html";
     difficulty = "screenAdvancedBoard";
 };
 
@@ -82,7 +82,7 @@ const screenLevel3 = () => {
 let selectThisLevel = sessionStorage.getItem("forLevel");
 let selectRes = document.getElementById(selectThisLevel);
 
-if (selectRes){
+if (selectRes) {
     selectRes.style.display = "flex";
 }
 
@@ -91,7 +91,7 @@ if (selectRes){
 const savePlayerName = () => {
 
     let player = document.getElementById("name").value;
-    if(player != "" && player != null){
+    if (player != "" && player != null) {
         sessionStorage.setItem("playerNameIs", player);
         window.location.href = "../pages/level.html";
     } else {
@@ -107,7 +107,7 @@ const savePlayerName = () => {
         setTimeout(() => {
             popUp.remove();
         }, 2000);
-    } 
+    }
 }
 
 // Create variable to get gamer Name and put it in the next page

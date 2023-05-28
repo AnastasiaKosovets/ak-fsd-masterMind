@@ -1,3 +1,4 @@
+/* general css style of the page */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@ body, .background {
     background-color: rgb(26, 26, 26);
 }
 
+/* css style of the font fot title */
 .master {
     font-family: "Warnes", Helvetica, sans-serif;
     color: rgb(246, 244, 247);
@@ -23,6 +25,7 @@ body, .background {
     text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
 }
 
+/* css style for buttons, card, and general box-shadow of all elements */
 .game, .howToPlay, .text, .name, .inputName, .cardChoiseLevel, .gameBut, .winnerText, .checkMy {
     box-shadow: 0em 0em 0.5em 0.1em rgb(243, 103, 236);
     color: rgba(255, 255, 255, 0.762);
@@ -41,6 +44,7 @@ body, .background {
     box-shadow: 0em 0em 0.5em 0.1em rgb(140, 46, 248);
 }
 
+/* add img in the about page */
 .circle{
     background-image: url(../img/circle1.png);
     height: 15em;

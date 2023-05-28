@@ -5,50 +5,50 @@ let containerR = document.getElementById("containerR");
 let rowCounter = 1;
 
 const createMyFills = () => {
-  let rowFil = document.createElement("div");
-  rowFil.className = "rowFil";
-  rowFil.id = "rowFil-" + rowCounter;
+    let rowFil = document.createElement("div");
+    rowFil.className = "rowFil";
+    rowFil.id = "rowFil-" + rowCounter;
 
-  for (let i = 0; i < 4; i++) {
-    let squareR = document.createElement("div");
-    squareR.className = "squareR";
-    rowFil.appendChild(squareR);
-  }
+    for (let i = 0; i < 4; i++) {
+        let squareR = document.createElement("div");
+        squareR.className = "squareR";
+        rowFil.appendChild(squareR);
+    }
 
-  let grid = document.createElement("div");
-  grid.className = "grid";
-  rowFil.appendChild(grid);
+    let grid = document.createElement("div");
+    grid.className = "grid";
+    rowFil.appendChild(grid);
 
-  for (let i = 0; i < 4; i++) {
-    let gridItem = document.createElement("div");
-    gridItem.className = "grid-item";
-    grid.appendChild(gridItem);
-  }
-  rowCounter += 1;
-  containerR.appendChild(rowFil);
+    for (let i = 0; i < 4; i++) {
+        let gridItem = document.createElement("div");
+        gridItem.className = "grid-item";
+        grid.appendChild(gridItem);
+    }
+    rowCounter += 1;
+    containerR.appendChild(rowFil);
 };
 
 //  Depends of level I create dinamic board from js
 let difficulty = sessionStorage.getItem("forLevel");
 if (difficulty === "beginnerRow") {
-  for (let i = 0; i < 10; i++) {
-    createMyFills();
-  }
+    for (let i = 0; i < 10; i++) {
+        createMyFills();
+    }
 } else if (difficulty === "mediumRow") {
-  for (let i = 0; i < 8; i++) {
-    createMyFills();
-  }
+    for (let i = 0; i < 8; i++) {
+        createMyFills();
+    }
 } else if (difficulty === "advancedRow") {
-  for (let i = 0; i < 6; i++) {
-    createMyFills();
-  }
+    for (let i = 0; i < 6; i++) {
+        createMyFills();
+    }
 }
 
 // Rescute value from sessionStorage for colors
 const colorsFromLocalStorage = JSON.parse(sessionStorage.getItem("myColor"));
 console.log(
-  "Estos son los colores que devuelve el sessionStorage:",
-  colorsFromLocalStorage
+    "Estos son los colores que devuelve el sessionStorage:",
+    colorsFromLocalStorage
 );
 
 // Here I create an array of values of this object
@@ -60,11 +60,11 @@ const myColorsForPlayElement = document.querySelector("#myColorsForPlay > div");
 // For created colors we make space with their HTML
 colors.map((color, index) => {
     // for each color in array it creates one div
-  const selectedColor = document.createElement("div");
-  selectedColor.classList.add("circleC-myColor");
-  selectedColor.id = "selectedColorsOfPicker" + index;
-  selectedColor.style.backgroundColor = color;
-  myColorsForPlayElement.appendChild(selectedColor);
+    const selectedColor = document.createElement("div");
+    selectedColor.classList.add("circleC-myColor");
+    selectedColor.id = "selectedColorsOfPicker" + index;
+    selectedColor.style.backgroundColor = color;
+    myColorsForPlayElement.appendChild(selectedColor);
 });
 
 // Generate random answer colors
@@ -72,17 +72,17 @@ let randomColors = [];
 
 const secretAnswerColor = () => {
     // asign values of saved colors
-  let transformToArrayColors = Object.values(colorsFromLocalStorage);
+    let transformToArrayColors = Object.values(colorsFromLocalStorage);
     //   new variable that asign arrat entire numbers in combination with keys()
-  let indexArray = [...Array(transformToArrayColors.length).keys()];
-  for (let i = 0; i < 4; i++) {
-    let randomIndex = Math.floor(Math.random() * indexArray.length);
-    let randomColorIndex = indexArray[randomIndex];
-    // save the color to array with .push()
-    randomColors.push(transformToArrayColors[randomColorIndex]);
-    // This part permits that the same color can not be choosen
-    indexArray.splice(randomIndex, 1);
-  }
+    let indexArray = [...Array(transformToArrayColors.length).keys()];
+    for (let i = 0; i < 4; i++) {
+        let randomIndex = Math.floor(Math.random() * indexArray.length);
+        let randomColorIndex = indexArray[randomIndex];
+        // save the color to array with .push()
+        randomColors.push(transformToArrayColors[randomColorIndex]);
+        // This part permits that the same color can not be choosen
+        indexArray.splice(randomIndex, 1);
+    }
 };
 
 secretAnswerColor();
@@ -99,16 +99,16 @@ const firstRowSquares = document.querySelectorAll(".rowFil:first-child .squareR"
 
 // With the forEach method and the click event we create the option to select color from the array of colors chosen within the circles.
 firstRowSquares.forEach((square) => {
-  square.addEventListener("click", () => {
-    // This part look index of color of the aquare and compare it with colors of array colors
-    let currentColorIndex = colors.indexOf(square.style.backgroundColor);
-    // Calculate index of next color with %, when it get last color, the index will be reset
-    let nextColorIndex = (currentColorIndex + 1) % colors.length;
-    // Take the index of the previos line
-    let nextColor = colors[nextColorIndex];
-    // casign the color that take from style.backgroundColor
-    square.style.backgroundColor = nextColor;
-  });
+    square.addEventListener("click", () => {
+        // This part look index of color of the aquare and compare it with colors of array colors
+        let currentColorIndex = colors.indexOf(square.style.backgroundColor);
+        // Calculate index of next color with %, when it get last color, the index will be reset
+        let nextColorIndex = (currentColorIndex + 1) % colors.length;
+        // Take the index of the previos line
+        let nextColor = colors[nextColorIndex];
+        // casign the color that take from style.backgroundColor
+        square.style.backgroundColor = nextColor;
+    });
 });
 
 // Start verification of the answer colors with random answer colors
@@ -180,5 +180,5 @@ const checkMyAnswer = () => {
         } else if (difficulty === "advancedRow" && currentRow > 6) {
             window.location.href = "./notYourTime.html"
         }
-        }
-    };
+    }
+};
