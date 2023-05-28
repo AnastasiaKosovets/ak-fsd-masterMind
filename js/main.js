@@ -91,8 +91,16 @@ const savePlayerName = () => {
         sessionStorage.setItem("playerNameIs", player);
         window.location.href = "../pages/level.html";
     } else {
-        alert("Nombre obligatorio!!");
-        window.location.href = "../pages/game.html";
+        let inputName = document.querySelector(".inputName");
+        let popUp = document.createElement("div");
+        popUp.className = "popUp";
+        popUp.textContent = "Nombre obligatorio!";
+        inputName.parentNode.appendChild(popUp);
+        popUp.classList.add("popUp-center");
+
+        setTimeout(() => {
+            popUp.remove();
+        }, 2000);
     } 
 }
 
