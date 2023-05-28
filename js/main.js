@@ -93,7 +93,7 @@ const savePlayerName = () => {
     } else {
         let inputName = document.querySelector(".inputName");
         let popUp = document.createElement("div");
-        popUp.className = "popUp";
+        popUp.className = "popUp col-4 col-md-6";
         popUp.textContent = "Nombre obligatorio!";
         inputName.parentNode.appendChild(popUp);
         popUp.classList.add("popUp-center");
