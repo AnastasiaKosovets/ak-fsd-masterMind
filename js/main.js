@@ -43,20 +43,20 @@ startColorsTransform();
 const screenBeginnerBoard = () => {
     sessionStorage.setItem("forBoard", "beginnerBoard");
     window.location.href = "./readyToPlay.html";
-    dificultad = "screenBeginnerBoard";
+    difficulty = "screenBeginnerBoard";
     
 };
 
 const screenMediumBoard = () => {
     sessionStorage.setItem("forBoard", "mediumBoard");
     window.location.href = "./readyToPlay.html";
-    dificultad = "screenMediumBoard";
+    difficulty = "screenMediumBoard";
 }
 
 const screenAdvancedBoard = () => {
     sessionStorage.setItem("forBoard", "advancedBoard"),
     window.location.href = "./readyToPlay.html";
-    dificultad = "screenAdvancedBoard";
+    difficulty = "screenAdvancedBoard";
 };
 
 // -------------- Function that save and change screen of the levels

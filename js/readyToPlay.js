@@ -28,16 +28,16 @@ const createMyFills = () => {
   containerR.appendChild(fila);
 };
 //  Depends of level I create dinamic board from js
-let dificultad = sessionStorage.getItem("forLevel");
-if (dificultad === "beginnerRow") {
+let difficulty = sessionStorage.getItem("forLevel");
+if (difficulty === "beginnerRow") {
   for (let i = 0; i < 10; i++) {
     createMyFills();
   }
-} else if (dificultad === "mediumRow") {
+} else if (difficulty === "mediumRow") {
   for (let i = 0; i < 8; i++) {
     createMyFills();
   }
-} else if (dificultad === "advancedRow") {
+} else if (difficulty === "advancedRow") {
   for (let i = 0; i < 6; i++) {
     createMyFills();
   }
@@ -159,8 +159,12 @@ const checkMyAnswer = () => {
         })
         currentRow++;
 
-        if (dificultad === "mediumRow" && currentRow > 8) {
+        if (difficulty === "beginnerRow" && currentRow > 10) {
             window.location.href ="./game.html";
+        } else if (difficulty === "mediumRow" && currentRow > 8) {
+            window.location.href = "./game.html"
+        } else if (difficulty === "advancedRow" && currentRow > 6) {
+            window.location.href = "./game.html"
         }
         }
     };
