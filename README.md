@@ -23,14 +23,15 @@ This third project is the first dynamic project created with JS. The purpose is 
 - Intermediate level consists of 5 colors to choose from and 8 attempts;* 
 - Advanced level consists of 6 colors to choose from and 6 attempts.
 
-####The game ends in two ways:
+#### The game ends in two ways:
 - when you have matched all the coolores, you will be redirected to the winner's page;
 - when you have exhausted all attempts, you will be redirected to the page where you will have several options to follow.
 
 ### Functionality:
 
-This game consists of several pages that you can access through steps to follow in game mode or from the main page. 
-####From the main page you can access to the page where the game starts:
+This game consists of several pages that you can access through steps to follow in game mode or from the main page.
+
+#### From the main page you can access to the page where the game starts:
 
 > ![image](./img/inputName.png)
 
@@ -43,15 +44,15 @@ This game consists of several pages that you can access through steps to follow 
 > ![image](./img/level.png)
 
 
-####Next, it take you to the choice of colors, depending of the level you have more or less colors to choose from:
+#### Next, it take you to the choice of colors, depending of the level you have more or less colors to choose from:
 
 > ![image](./img/selectColors.png)
 
-####Finally it takes you to the board page and to play ;)
+#### Finally it takes you to the board page and to play ;)
 
 > ![image](./img/gameBoard.png)
 
-####Depending on the answer you get, it will take you to one or another final window of the game:
+#### Depending on the answer you get, it will take you to one or another final window of the game:
 
 > ![image](./img/winner.png)  ![image](./img/notYourTime.png)
 
@@ -62,13 +63,13 @@ This project was developed with HTML5, CSS3 and JavaScript. The game website is 
 
 ***In order to carry out the functionality of the game, I have implemented the JS knowledge of functions, variables and const in addition to:***
 
-####DOM/BOM: 
+#### DOM/BOM: 
 >- *createElement(),*
 >- *documentElement(),*
 >- *getElementById(),*
 >- *querySelector() and querySelectorAll()*
 
-####Array methods:
+#### Array methods:
 >- *.lenght,*
 >- *.indexOf(),*
 >- *Array.from(),*
@@ -78,7 +79,7 @@ This project was developed with HTML5, CSS3 and JavaScript. The game website is 
 >- *.splice(),*
 >- *and others...*
 
-####Loops:
+#### Loops:
 >- *for;*
 >- *if/else;*
 
