@@ -2,50 +2,56 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>masterMind</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../css/style.css"/>
     <link
       async
       href="https://fonts.googleapis.com/css?family=Warnes"
       data-generated="http://enjoycss.com"
       rel="stylesheet"
-      type="text/css"
-    />
+      type="text/css"/>
     <link
       rel="shortcut icon"
       href="./img/logoGamePrueba.png"
-      type="image/x-icon"
-    />
+      type="image/x-icon"/>
   </head>
   <body>
+
+    <!-- First part of the page-->
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="card d-flex justify-content-center bg-transparent border-0">
           <div class="card-body ms-5 master">
+
+            <!-- masterMind title text -->
             <a href="../index.html"></a>
             <p class="text-center col-8 col-md-11">--- masterMind ---</p>
           </div>
         </div>
       </div>
+
+      <!-- Add logo for the game -->
       <div class="row d-flex justify-content-center mb-3">
         <div class="col-10 col-md-10 d-flex justify-content-center">
           <a href="../index.html" class="d-flex justify-content-center">
             <img
               src="../img/logoGamePrueba.png"
               class="gitLogo col-8 col-md-8"
-              alt="logo GitHub"
-            />
+              alt="logo GitHub"/>
           </a>
         </div>
       </div>
+
+      <!-- Second part of the page -->
       <div class="row d-flex justify-content-center text-center">
+        
+        <!-- Choose your colors -->
         <div class="col master">
           <p>Escoge los colores</p>
         </div>
@@ -56,47 +62,39 @@
       <div class="row row-cols-2 mb-4" id="beginnerRow">
         <div class="col-md-3 d-flex flex-column align-items-center p-0">
           <div class="m-3 m-md-5 square" id="squareA"></div>
-          <input type="color" class="picker" id="A" />
+          <input type="color" class="picker" id="A"/>
         </div>
         <div class="col-md-3 d-flex flex-column align-items-center p-0">
           <div class="m-3 m-md-5 square" id="squareA1"></div>
-          <input type="color" class="picker" id="A1" />
+          <input type="color" class="picker" id="A1"/>
         </div>
         <div class="col-md-3 d-flex flex-column align-items-center p-0">
           <div class="m-3 m-md-5 square" id="squareA2"></div>
-          <input type="color" class="picker" id="A2" />
+          <input type="color" class="picker" id="A2"/>
         </div>
         <div class="col-md-3 d-flex flex-column align-items-center p-0 mb-5">
           <div class="m-3 m-md-5 square" id="squareA3"></div>
-          <input type="color" class="picker" id="A3" />
+          <input type="color" class="picker" id="A3"/>
         </div>
         <div
-          class="col col-md-12 me-5 text-center d-flex justify-content-center"
-        >
+          class="col col-md-12 me-5 text-center d-flex justify-content-center">
           <div class="card col-12 col-md-8 bg-transparent border-0">
             <div class="card-body d-flex justify-content-evenly">
               <img
                 src="../img/ready.gif"
                 class="d-none d-md-block"
-                alt="checkIcon"
-              />
+                alt="checkIcon"/>
               <img
                 src="../img/giphy.gif"
                 alt="checkIcon"
-                class="d-none d-md-block"
-              />
+                class="d-none d-md-block"/>
               <img
                 src="../img/ready.gif"
                 class="d-none d-md-block"
-                alt="checkIcon"
-              />
+                alt="checkIcon"/>
             </div>
             <div onclick="saveMyColor()">
-              <a
-                
-                class="btn play master justify-content-center mb-4 col-12 col-md-3" onclick="screenBeginnerBoard()"
-                >A Jugar!</a
-              >
+              <a class="btn play master justify-content-center mb-4 col-12 col-md-3" onclick="screenBeginnerBoard()">A Jugar!</a>
             </div>
           </div>
         </div>
@@ -107,50 +105,45 @@
       <div class="row row-cols-2 row-cols-md-5 mb-4" id="mediumRow">
         <div class="col d-flex flex-column align-items-center">
           <div class="m-3 m-md-5 square" id="squareB"></div>
-          <input type="color" class="picker" id="B" />
+          <input type="color" class="picker" id="B"/>
         </div>
         <div class="col d-flex flex-column align-items-center">
           <div class="m-3 m-md-5 square" id="squareB1"></div>
-          <input type="color" class="picker" id="B1" />
+          <input type="color" class="picker" id="B1"/>
         </div>
         <div class="col d-flex flex-column align-items-center">
           <div class="m-3 m-md-5 square" id="squareB2"></div>
-          <input type="color" class="picker" id="B2" />
+          <input type="color" class="picker" id="B2"/>
         </div>
         <div class="col d-flex flex-column align-items-center">
           <div class="m-3 m-md-5 square" id="squareB3"></div>
-          <input type="color" class="picker" id="B3" />
+          <input type="color" class="picker" id="B3"/>
         </div>
         <div class="col d-flex flex-column align-items-center mb-5">
           <div class="m-3 m-md-5 square" id="squareB4"></div>
-          <input type="color" class="picker" id="B4" />
+          <input type="color" class="picker" id="B4"/>
         </div>
         <div
-          class="col col-md-12 me-5 text-center d-flex justify-content-center"
-        >
+          class="col col-md-12 me-5 text-center d-flex justify-content-center">
           <div class="card col-12 col-md-8 bg-transparent border-0">
             <div class="card-body d-flex justify-content-evenly">
               <img
                 src="../img/ready.gif"
                 class="d-none d-md-block"
-                alt="checkIcon"
-              />
+                alt="checkIcon"/>
               <img
                 src="../img/giphy.gif"
                 alt="checkIcon"
-                class="d-none d-md-block"
-              />
+                class="d-none d-md-block"/>
               <img
                 src="../img/ready.gif"
                 class="d-none d-md-block"
-                alt="checkIcon"
-              />
+                alt="checkIcon"/>
             </div>
             <div onclick="saveMyColor()">
               <a
-                class="btn play master justify-content-center mb-4 col-12 col-md-3" onclick="screenMediumBoard()"
-                >A Jugar!</a
-              >
+                class="btn play master justify-content-center mb-4 col-12 col-md-3"
+                onclick="screenMediumBoard()">A Jugar!</a>
             </div>
           </div>
         </div>
@@ -161,54 +154,49 @@
       <div class="row row-cols-2 row-cols-md-6 mb-4" id="advancedRow">
         <div class="col d-flex flex-column align-items-center">
           <div class="m-3 m-md-5 square" id="squareC"></div>
-          <input type="color" class="picker" id="C" />
+          <input type="color" class="picker" id="C"/>
         </div>
         <div class="col d-flex flex-column align-items-center">
           <div class="m-3 m-md-5 square" id="squareC1"></div>
-          <input type="color" class="picker" id="C1" />
+          <input type="color" class="picker" id="C1"/>
         </div>
         <div class="col d-flex flex-column align-items-center">
           <div class="m-3 m-md-5 square" id="squareC2"></div>
-          <input type="color" class="picker" id="C2" />
+          <input type="color" class="picker" id="C2"/>
         </div>
         <div class="col d-flex flex-column align-items-center">
           <div class="m-3 m-md-5 square" id="squareC3"></div>
-          <input type="color" class="picker" id="C3" />
+          <input type="color" class="picker" id="C3"/>
         </div>
         <div class="col d-flex flex-column align-items-center">
           <div class="m-3 m-md-5 square" id="squareC4"></div>
-          <input type="color" class="picker" id="C4" />
+          <input type="color" class="picker" id="C4"/>
         </div>
         <div class="col d-flex flex-column align-items-center mb-5">
           <div class="m-3 m-md-5 square" id="squareC5"></div>
-          <input type="color" class="picker" id="C5" />
+          <input type="color" class="picker" id="C5"/>
         </div>
         <div
-          class="col col-md-12 me-5 text-center d-flex justify-content-center"
-        >
+          class="col col-md-12 me-5 text-center d-flex justify-content-center" >
           <div class="card col-12 col-md-8 bg-transparent border-0">
             <div class="card-body d-flex justify-content-evenly">
               <img
                 src="../img/ready.gif"
                 class="d-none d-md-block"
-                alt="checkIcon"
-              />
+                alt="checkIcon"/>
               <img
                 src="../img/giphy.gif"
                 alt="checkIcon"
-                class="d-none d-md-block"
-              />
+                class="d-none d-md-block"/>
               <img
                 src="../img/ready.gif"
                 class="d-none d-md-block"
-                alt="checkIcon"
-              />
+                alt="checkIcon"/>
             </div>
             <div onclick="saveMyColor()">
               <a
-                class="btn play master justify-content-center mb-4 col-12 col-md-3" onclick="screenAdvancedBoard()"
-                >A Jugar!</a
-              >
+                class="btn play master justify-content-center mb-4 col-12 col-md-3" 
+                onclick="screenAdvancedBoard()">A Jugar!</a>
             </div>
           </div>
         </div>
@@ -217,9 +205,7 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-    
+      crossorigin="anonymous"></script>
     <script src="../js/main.js"></script>
     <script src="../js/readyToPlay.js"></script>
   </body>
