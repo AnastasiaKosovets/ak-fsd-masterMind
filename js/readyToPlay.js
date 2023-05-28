@@ -160,7 +160,7 @@ const checkMyAnswer = () => {
         currentRow++;
 
         if (difficulty === "beginnerRow" && currentRow > 10) {
-            window.location.href ="./game.html";
+            window.location.href = "./game.html"
         } else if (difficulty === "mediumRow" && currentRow > 8) {
             window.location.href = "./game.html"
         } else if (difficulty === "advancedRow" && currentRow > 6) {
