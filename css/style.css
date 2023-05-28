@@ -96,10 +96,6 @@ body, .background {
     box-shadow: 0em 0em 0.5em 0.1em white;
 }
 
-/* .colorPk {
-    border-radius: 50%;
-} */
-
 #beginnerRow, #mediumRow, #advancedRow {
     display: none;
 }
@@ -151,12 +147,6 @@ body, .background {
     flex-direction: column;
 }
 
-/* #tablero {
-    width: 20em;
-    background-color: darkgrey;
-    border: solid 0.5em black;
-} */
-
 /* Board style */
 
 #beginnerBoard, #mediumBoard, #advancedBoard {
@@ -179,14 +169,6 @@ body, .background {
     margin-left: 1em;
     border-radius: 1em;
 }
-
- /*.circleC {
-    height: 3em;
-    width: 3em;
-    margin: 0.1em;
-    border-radius: 50%;
-    box-shadow: 0em 0em 0.5em 0.1em rgb(140, 46, 248);
-} */
 
 .circleC, .circleC-myColor {
     height: 2em;
@@ -216,18 +198,9 @@ body, .background {
     box-shadow: 0em 0em 0.5em 0.1em rgba(236, 37, 209, 0.87);
 }
 
-/* .checkBtt {
-    margin-left: 2em;
-    margin-top: 0.5em;
-    height: 3em;
-    width: 3em;
-    box-shadow: 0em 0em 0.5em 0.1em rgba(236, 37, 209, 0.87);;
-} */
-
 .popUp {
     height: 10em;
     width: 30em;
-    /* max-width: 40%; */
     position: absolute;
     bottom: 10em;
     left: 50%;
