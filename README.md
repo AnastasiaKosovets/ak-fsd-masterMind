@@ -36,11 +36,11 @@ This game consists of several pages that you can access through steps to follow 
 
 > ![image](./img/inputName.png)
 
-####Or to the page where you can read information about the game and access the game author's personal page:
+#### Or to the page where you can read information about the game and access the game author's personal page:
 
 > ![image](./img/aboutPage.png)
 
-####Once you have introduced your name, you will be redirected to the level selection page:
+#### Once you have introduced your name, you will be redirected to the level selection page:
 
 > ![image](./img/level.png)
 
@@ -55,7 +55,7 @@ This game consists of several pages that you can access through steps to follow 
 
 #### Depending on the answer you get, it will take you to one or another final window of the game:
 
-> ![image](./img/winner.png)  ![image](./img/notYourTime.png)
+> ![image](./img/winner.png)   ![image](./img/notYourTime.png)
 
 
 ### Process:
