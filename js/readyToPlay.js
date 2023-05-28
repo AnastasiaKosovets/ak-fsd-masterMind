@@ -7,6 +7,7 @@ const createMyFills = (numRows) => {
     for (let i = 0; i < numRows; i++) {
      let fila = document.createElement("div");
      fila.className = "fila";
+     fila.classList.add("fila-" + 1);
  
      for (let x = 0; x < 4; x++) {
  
@@ -47,7 +48,7 @@ if (dificultad === "beginnerRow") {
 //  Guardamos los colores seleccionados y pasamos a los divs
 
 //  Prueba de pintar cada circulo con los colores elegidos
-let squareElements = document.querySelectorAll(".squareR");
+// let squareElements = document.querySelectorAll(".squareR");
 
 // Este es el contenedor donde se van a agregar los colores en el HTML.
 let myColorsForPlayElement = document.querySelector("#myColorsForPlay > div");
@@ -108,6 +109,12 @@ document.getElementById("secretColorAnswer2").style.backgroundColor = randomColo
 document.getElementById("secretColorAnswer3").style.backgroundColor = randomColors[2];
 document.getElementById("secretColorAnswer4").style.backgroundColor = randomColors[3];
 
+// agregamos una constante
+const checkButtton = document.getElementById("checkMyVersion");
+checkButtton.addEventListener("click", () => {
+    checkMyAnswer();
+});
+
 // Creando const vinculado al check, para comprobar los colores elegidos con secret answer
 
 const checkMyAnswer = () => {
@@ -141,27 +148,31 @@ const checkMyAnswer = () => {
                 } else if (matchedColors.includes(index)) {
                     gridItem.style.backgroundColor = "white";
                 } else {
-                    gridItems.style.backgroundColor = "transparent";
+                    gridItem.style.backgroundColor = "transparent";
                 }
             }
         });
-    // gridItems.forEach((gridItem, index) => {
-    //     if(matchedPosicions.includes(index)){
-    //         gridItem.style.backgroundColor = "red";
-    //     } else if(matchedColors.includes(index)) {
-    //         gridItem.style.backgroundColor = "white";
-    //     } else {
-    //         gridItem.style.backgroundColor = "transparent";
-    //     }
-    // });
 
     let correctAnswerSecretChoise = Array.from(firstRowSquares, (el) => el.style.backgroundColor);
     
         if (JSON.stringify(correctAnswerSecretChoise) === JSON.stringify(randomColors)) {
             // console.log("has acertado con los colores");
             window.location.href = "./winner.html"
-        } else if (JSON.stringify(correctAnswerSecretChoise) != JSON.stringify(randomColors)) {
-            
+        } else {
+            // const rowCurrentPosicion = document.querySelector(".fila:not(.unlocked");
+            // if (rowCurrentPosicion) {
+            //     rowCurrentPosicion.classList.add("unlocked");
+            //     const nextRowFills = rowCurrentPosicion.nextElementSibling.querySelectorAll(".squareR");
+            //     const nextRowSquares = Array.from(nextRowFills);
+            //     nextRowSquares.forEach((square) => {
+            //         square.addEventListener("click", () => {
+            //             let currentColorIndex = colors.indexOf(square.style.backgroundColor);
+            //             let nextColorIndex = (currentColorIndex + 1) % colors.length;
+            //             let nextColor = colors[nextColorIndex];
+            //             square.style.backgroundColor = nextColor;
+            //         });
+            //     });
+            // }
         }
 };
 checkMyAnswer();
