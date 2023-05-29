@@ -22,6 +22,7 @@ function startup(event) {
 const updateColor = (event, element) => {
     let colorSquare = document.getElementById(`square${element.id}`);
     colorSquare.style.backgroundColor = event.target.value;
+    // getComputedStyle take devolve object with acces to prederminated style
     let color = getComputedStyle(colorSquare).backgroundColor;
     arrayMyColor[element.id] = color;
 }
@@ -32,6 +33,7 @@ const saveMyColor = () => {
     window.location.href = "./readyToPlay.html";
 }
 
+// Parse some elements and transform it to object
 let myColor = JSON.parse(sessionStorage.getItem("myColor"));
 let transformToArrayColors = [];
 
@@ -59,7 +61,7 @@ const screenMediumBoard = () => {
 
 const screenAdvancedBoard = () => {
     sessionStorage.setItem("forBoard", "advancedBoard"),
-        window.location.href = "./readyToPlay.html";
+    window.location.href = "./readyToPlay.html";
     difficulty = "screenAdvancedBoard";
 };
 

@@ -54,7 +54,7 @@ console.log(
 // Here I create an array of values of this object
 const colors = Object.values(colorsFromLocalStorage);
 
-// This is container where will be saved coolors in HTML 
+// This is container where will be saved coolors in HTML ; > - to descendent elementos of this div
 const myColorsForPlayElement = document.querySelector("#myColorsForPlay > div");
 
 // For created colors we make space with their HTML
@@ -71,9 +71,9 @@ colors.map((color, index) => {
 let randomColors = [];
 
 const secretAnswerColor = () => {
-    // asign values of saved colors
+    // asign values of saved colors and create new a vector
     let transformToArrayColors = Object.values(colorsFromLocalStorage);
-    //   new variable that asign arrat entire numbers in combination with keys()
+    //   new variable that asign array entire numbers in combination with keys()
     let indexArray = [...Array(transformToArrayColors.length).keys()];
     for (let i = 0; i < 4; i++) {
         let randomIndex = Math.floor(Math.random() * indexArray.length);
@@ -106,7 +106,7 @@ firstRowSquares.forEach((square) => {
         let nextColorIndex = (currentColorIndex + 1) % colors.length;
         // Take the index of the previos line
         let nextColor = colors[nextColorIndex];
-        // casign the color that take from style.backgroundColor
+        // Asign the color that take from style.backgroundColor
         square.style.backgroundColor = nextColor;
     });
 });
