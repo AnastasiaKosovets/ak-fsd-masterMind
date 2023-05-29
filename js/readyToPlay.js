@@ -154,7 +154,7 @@ const checkMyAnswer = () => {
     } else {
         // Here I clone and change squares of the row to change eventListener 
         squareElements.forEach((square) => {
-            // With .cloneNode(true) method I clone every sauqre and elements that containe square
+            // With .cloneNode(true) of DOM method I clone every square and elements that containe square
             let clonedSquare = square.cloneNode(true);
             // With this method I replace origin square fot it cloned square
             square.parentNode.replaceChild(clonedSquare, square);
